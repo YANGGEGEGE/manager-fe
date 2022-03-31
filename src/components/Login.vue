@@ -21,6 +21,17 @@ export default {
       this.$router.push("./welcome");
     },
   },
+  mounted(){
+    this.$request({
+      methods:'get',
+      url:'/login',
+      data:{
+        name:'jack'
+      }
+    }).then((res)=>{
+      console.log(res);
+    })
+  }
 };
 </script>
 
